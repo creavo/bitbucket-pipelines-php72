@@ -10,13 +10,14 @@
 - wget, curl, unzip
 - Composer
 - Mysql 5.7
+- Redis-Server
 - NPM
 - Node + Yarn
 
 ### Sample `bitbucket-pipelines.yml`
 
 ```YAML
-image: pyguerder/bitbucket-pipelines-php72
+image: creavo/bitbucket-pipelines-php72
 pipelines:
   default:
     - step:
