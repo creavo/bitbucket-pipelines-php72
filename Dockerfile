@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-MAINTAINER Pierre-Yves Guerder <pierreyves.guerder@gmail.com>
+MAINTAINER Creavo <info@creavo.de>
 
 # Set environment variables
 ENV HOME /root
@@ -45,7 +45,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get autoremove -y && \
     apt-get autoclean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    rm /var/lib/mysql/ib_logfile*
+    rm /var/lib/mysql/ib_logfile* \
+    systemctl start redis-server
 
 # Ensure UTF-8
 ENV LANG       en_US.UTF-8
