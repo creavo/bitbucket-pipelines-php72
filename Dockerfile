@@ -47,8 +47,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     rm /var/lib/mysql/ib_logfile*
     
-RUN systemctl start redis-server && \
-    systemctl enable redis-server
+# RUN systemctl start redis-server && \
+#     systemctl enable redis-server
 
 # Ensure UTF-8
 ENV LANG       en_US.UTF-8
